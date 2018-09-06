@@ -1,0 +1,12 @@
+<div [@slideInOut]="menuState">
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <button class="btn" (click)="closeMenu()">
+                <span>&#9747;</span>
+            </button>
+            <a routerLink='/login' id="login">Sign In</a>
+            <a routerLink='/signup' id="SignUp">Sign Up</a>
+
+        </div>
+    </div>
+</div>

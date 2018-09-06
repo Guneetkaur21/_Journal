@@ -1,0 +1,131 @@
+.centerTitle{
+    margin-top : 50px;
+    margin-left : 50px;
+    font-size:200%;
+}
+
+.topicHeader{
+    margin-top : 10px;
+    margin-left : 50px;
+    font-size:130%;
+}
+
+#firstCard{
+    width:500px;
+    height:200px;
+    margin-left:50px;
+    background-color: rgb(226, 226, 226);
+}   
+
+#secondCard{
+    width:500px;
+    height:200px;
+   
+    margin-left:50px;
+    background-color: rgb(226, 226, 226);
+}
+
+#thirdCard{
+    width:500px;
+ 
+    margin-left:50px;
+    background-color: rgb(226, 226, 226);
+}
+
+.firstList{
+    margin-left:20px;
+}
+
+.secondList{
+    margin-left:130px;
+}
+
+.thirdList{
+    margin-left:250px;
+}
+
+.forthList{
+    margin-left:370px;
+}
+
+.usefulLinks{
+    text-align: right;
+    margin-right:180px;
+    position: absolute;
+    top:100px;
+    right:0;
+}
+
+.youtubeTag{
+    position: absolute;
+    margin-right:170px;
+    right:0;
+    top:120px;
+}
+
+.mailTag{
+    position: absolute;
+    margin-right:50px;
+    right:0;
+    top:130px;
+}
+
+#youtube_searched_for{
+    position: relative;
+    margin-top:10px;
+}
+
+#mail{
+    padding-top: 5px;   
+}
+
+#secondCard{
+    position:relative;
+    margin-left:600px;
+    width:450px;
+    height:600px;
+    top:-300px;
+}
+
+/* For the header */
+.btn{
+    margin-left: 10px;
+    background-color :#22a6b3;
+    border :none;
+}
+
+#titlebar {
+    background-color: rgb(148, 186, 204);
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(148, 186, 204);
+    display: inline;
+}
+
+.navbar-brand{
+    float :center;
+    margin-left: 40%;
+    font-size: 30px;
+}
+
+.btns {   /*Sign in and Sign Up Buttons */
+    float: right;
+    color :"#30336b"
+}
+
+.navbar-header{
+    background-color:#22a6b3;
+}
+
+#search{
+    margin-top:20px;
+}
+

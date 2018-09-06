@@ -1,0 +1,199 @@
+<nav class="navbar navbar-default" style="background-color:#22a6b3;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <ul class="nav navbar-nav">
+                <div class="menu_button">
+                    <li>
+                        <button class="btn" (click)="toggleMenu()">
+                            <span>&#9776;</span>
+                        </button>
+                    </li>
+                </div>
+                <app-menu [@slideInOut]="menuState"></app-menu>
+                <div class="title" style="text-align:center">
+                    <li class="navbar-brand">
+                        Journal
+                    </li>
+                </div>
+
+                <div class="btns">
+                    <li class="material-icons prefix col s2" id="search">
+                        search
+                    </li>
+                    <li>
+                        <a routerLink='/_' onclick="sessionStorage.clear(); ">Log Out</a>
+                    </li>
+
+                </div>
+                <li style="float:right; margin-top:-15px;">
+                    <p style="float:right; margin-right:10px">Welcome {{str}}!</p>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="centerTitle"> Journals </div>
+
+<div class="topicHeader">
+    <p>Journals By Subject |
+        <a herf="#">Journals A-Z </a>
+    </p>
+</div>
+<div>
+        <ul>
+            <li>
+                <a routerLink='/publish'>Publish a new article!</a>
+            </li>
+        </ul>
+    </div>
+
+<div class="card" id="firstCard">
+    <div class="card-body">
+        <div class="firstList">
+
+            <ul style="width:10%; float:left;">
+
+                <li>
+                    <a herf="#" style="margin-top:100px;">Biology</a>
+                </li>
+                <li>
+                    <a herf="#">Chemistry</a>
+                </li>
+                <li>
+                    <a herf="#">English</a>
+                </li>
+                <li>
+                    <a herf="#">Zoology</a>
+                </li>
+                <li>
+                    <a herf="#">Social Science</a>
+                </li>
+                <li>
+                    <a herf="#">Architecture</a>
+                </li>
+                <li>
+                    <a herf="#">Energy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="secondList">
+            <ul style="width:10%; float:left;">
+
+                <li>
+                    <a herf="#" style="margin-top:100px;">History</a>
+                </li>
+                <li>
+                    <a herf="#">Material Science</a>
+                </li>
+                <li>
+                    <a herf="#">Physics</a>
+                </li>
+                <li>
+                    <a herf="#">Psychology</a>
+                </li>
+                <li>
+                    <a herf="#">Medicine</a>
+                </li>
+                <li>
+                    <a herf="#">Law</a>
+                </li>
+                <li>
+                    <a herf="#">Geography</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="thirdList">
+            <ul style="width:10%; float:left;">
+                <li>
+                    <a herf="#">Life Sicence</a>
+                </li>
+                <li>
+                    <a herf="#">Enviornment</a>
+                </li>
+                <li>
+                    <a herf="#">Geography</a>
+                </li>
+                <li>
+                    <a herf="#">Economics</a>
+                </li>
+                <li>
+                    <a herf="#">Dentistry</a>
+                </li>
+                <li>
+                    <a herf="#">Linguistics</a>
+                </li>
+                <li>
+                    <a herf="#">Statistics</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="forthList">
+            <ul style="width:10%; float:left;">
+                <li>
+                    <a herf="#">Criminology</a>
+                </li>
+                <li>
+                    <a herf="#">Computer&nbsp;Science</a>
+                </li>
+                <li>
+                    <a herf="#">Biomedicine</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="thirdCard">
+        <div class="card-header">
+            The published articles !
+        </div>
+        <div class="card-body">
+        <ul>
+            <li *ngFor="let obj of arr;  let i = index">
+              {{i+1}}. Title :  {{ obj.title }}
+              <br>
+              Date:&nbsp;{{obj.date | date}}
+              <br>
+              <p style="padding:0; margin:0" [innerHTML]="obj.content"></p>
+              <a routerLink='/publish' (click)="readMore(obj)">Read More..</a> 
+              <br>
+              <br>
+            </li>
+        </ul>
+        </div>
+</div>
+
+<div class="usefulLinks">
+    <p>Connect</p>
+</div>
+<div class="youtubeTag">
+    <p class="material-icons prefix col s2" id="youtube_searched_for">youtube_searched_for&nbsp;</p>
+    <a herf="#">Youtube</a>
+</div>
+<div class="mailTag">
+    <p class="material-icons prefix col s2" id="mail">mail&nbsp;</p>
+    <a herf="#">Connect Us&nbsp;Through Mail.</a>
+</div>
+
+
+
+<!-- <div class="card" id="secondCard" style="margin-top:-300px">
+    <div class="card-body">
+        <h5 class="card-title" style="text-align:center;">Trending Journals</h5>
+        <img class="card-img-top" src="assets/Image1.jpg" width="200" height="200" style="margin-left:10px;" alt=" Media And Education">
+        <p style="margin-left:10px; margin-top:3px;">Media And Education</p>
+
+        <img class="card-img-top" src="assets/Image2.jpg" width="200" height="200" style="margin-left:230px;" alt="Caffeine After Effects">
+        <p style="position:relative; top:0; margin-left:230px; margin-top:3px;">Caffeine After Effects</p>
+    </div>
+</div> -->
+
+

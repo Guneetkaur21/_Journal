@@ -1,0 +1,9 @@
+.container{
+    width: 750px;
+   padding-right: 100px;
+
+}
+
+.card .grey .lighten-2{
+    background-color: red;
+}

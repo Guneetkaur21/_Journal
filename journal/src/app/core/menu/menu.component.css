@@ -1,0 +1,47 @@
+   
+
+ :host {
+ /*   background: #22a6b3; */
+    background-color: #22a6b3; 
+    background-color: rgba(34,166,179, 0.9); 
+    color: rgb(31, 30, 30);
+    position: fixed;
+    left: 0;  
+    top: 0;
+    right: auto; 
+    bottom: 0;
+    width: 20%;
+    min-width: 250px;
+    z-index: 1;
+    font-family: Arial;
+    overflow-x: hidden;
+  }
+ 
+  .overlay-content {
+    position: absolute;
+    font-size: 20px;
+    line-height: 3;
+    font-weight: 400;
+    padding-top: 50px;
+    list-style: none;
+    text-decoration-color: white;   
+    color: white;
+    text-align: center;
+    display: inline-block;
+  }
+
+  #login{
+    padding-top: 0px;
+    padding-left : 0px;
+    margin-top:80px;
+    margin-left :60px;
+ 
+  }
+
+  #SignUp{
+    margin-left :50px;
+    margin-top:10px;
+  }
+
+  
+ 

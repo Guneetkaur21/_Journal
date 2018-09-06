@@ -1,0 +1,43 @@
+.btn{
+    margin-left: 10px;
+    background-color :#22a6b3;
+    border: 0px ;
+    padding:0px;
+    width: 50px;
+}
+
+#titlebar {
+    background-color: rgb(148, 186, 204);
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(148, 186, 204);
+    display: inline; 
+    
+}
+
+.navbar-brand{
+    float :center;
+    margin-left: 40%;
+    font-size: 30px;
+}
+
+.btns {   /*Sign in and Sign Up Buttons */
+    float: right;
+    color :"#30336b"
+}
+
+.navbar-header{
+    background-color:#22a6b3;
+}
+
+#search{
+    margin-top:20px;
+}

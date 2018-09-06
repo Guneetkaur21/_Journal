@@ -1,0 +1,102 @@
+<!-- 
+  <div class="row">
+  <div class="col s8 offset-s2">
+    <div class="card">
+      <div class="sm-header center-align">
+        <h2>User Registration</h2>
+      </div> -->
+
+<!--  <p>Helllo {{ UserName }}</p> 
+    (ngSubmit)="onSubmit(userRegistrationForm.value)"-->
+
+<form novalidate class="col s12 white" name="userRegistrationForm" #userRegistrationForm="ngForm" (ngSubmit)="onSubmit(this,userRegistrationForm,userRegistrationForm.value)">
+  <div class="row">
+    <div class="class input-field col s12">
+
+      <div class="class input-field col s12">
+        <input class="validate" type="text" name="firstname" #firstname="ngModel" [(ngModel)]="FirstNameText" required minlength="5">
+        <label>First Name&nbsp;*</label>
+        <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+          <small class="text-danger" style= "color:red" *ngIf="firstname.errors.required">First Name is required.</small>
+          <small class="text-danger" style= "color:red" *ngIf="firstname.errors.minlength">First Name should have atleast 5 characters.</small>
+        </div>
+      </div>
+
+      <div class="class input-field col s12">
+        <input class="validate" type="text" name="lastname" #lastname="ngModel" [(ngModel)]="LastNameText" required minlength="3">
+        <label>Last Name&nbsp;*</label>
+        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+          <small class="text-danger" style= "color:red" *ngIf="lastname.errors.required">Last Name is required.</small>
+          <small class="text-danger" style= "color:red" *ngIf="lastname.errors.minlength">Last Name should have atleast 3 characters.</small>
+        </div>
+      </div>
+
+      <div class="class input-field col s12">
+        <input class="validate" type="text" name="userName" pattern="^[a-zA-Z0-9_]{3,15}$" #userName="ngModel" [(ngModel)]='UserNameText'
+        (ngModelChange)= "checkValidity(userName.value,userRegistrationForm)"  required minlength="5">
+       <!--  -->
+        <label>UserName&nbsp;*</label>
+        
+        <div ng-if="userName.dirty; then checkValidity()"></div>
+        <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+          <small class="text-danger" style= "color:red" *ngIf="userName.errors.incorrect">Username Already Exists!</small>
+          <small class="text-danger" style= "color:red" *ngIf="userName.errors.required">Username Required.</small>
+          <small class="text-danger" style= "color:red" *ngIf="userName.errors.minlength">Username should be more than 4 characters.</small>
+          <small class="text-danger" style= "color:red" *ngIf="userName.errors.pattern">Username should be alpha-numeric and in lower case.</small>
+        
+        </div>
+      </div>
+
+
+
+      <div class="class input-field col s12">
+
+        <input class="validate" type="email" name="email" #email="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="EmailText"
+          required>
+        <label>Email&nbsp;*</label>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <small class="text-danger" style= "color:red" *ngIf="email.errors.required">Email is required.</small>
+          <small class="text-danger" style= "color:red" *ngIf="email.errors.pattern">Please enter a valid Email.</small>
+        </div>
+      </div>
+
+      <div class="class input-field col s12">
+        <input class="validate" type="password" name="passwordText" #passwordText="ngModel" [(ngModel)]="Password" required minlength="5">
+        <!--<label [attr.data-error]="passwordText.errors!=null?(passwordText.errors.required?'Required field' : 'Minimum 3 Characters'):''">Password</label> -->
+        <label>Password&nbsp;*</label>
+        <div *ngIf="passwordText.invalid && (passwordText.dirty || passwordText.touched)" class="alert alert-danger">
+          <small class="text-danger" style= "color:red" *ngIf="passwordText.errors.required">Password Required.</small>
+          <small class="text-danger" style= "color:red" *ngIf="passwordText.errors.minlength">Password should be more than 4 characters.</small>
+        </div>
+
+      </div>
+  
+      <div class="class input-field col s12">
+        <input class="validate" type="password" name="confirmpasswordText" #confirmpasswordText="ngModel" [(ngModel)]="ConfirmPassword" required validateEqual="passwordText">
+        
+        <!-- <label [attr.data-error]="passwordText.errors!=null?(passwordText.errors.required?'Required field' : 'Minimum 3 Characters'):''">Password</label>  -->
+        <label>Confirm Password&nbsp;*</label>
+        <div *ngIf="confirmpasswordText.invalid || (confirmpasswordText.touched )" class="alert alert-danger">
+          <!--<small class="text-danger" *ngIf="confirmpasswordText.errors.required">Required.</small> -->
+          <!--    <small class="text-danger" *ngIf="confirmpasswordText.errors.compare && !confirmpasswordText.errors.required">Password Mismatch.</small> -->
+          <small class="text-danger" style= "color:red" *ngIf="confirmpasswordText.value != passwordText.value " >Password Mismatch.</small>
+        </div>
+        
+
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <button class="btn-large btn-submit" type="submit" [disabled]="!userRegistrationForm.valid">Submit</button>
+        </div>
+        <p> &nbsp;&nbsp;*Mandatory Fields!</p>
+      </div>
+ 
+    </div>
+    
+  </div>
+</form>
+
+
+
